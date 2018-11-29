@@ -1,11 +1,11 @@
 <section class="sidebar" aria-label="Filtres">
   <section>
     <h2>Catégories</h2>
-    <div class="btn-group vertical" id="product-categories">
-      <button>Appareils photo</button>
-      <button>Consoles</button>
-      <button>Écrans</button>
-      <button>Ordinateurs</button>
+    <div class="btn-group vertical" id="product-categories" (click)="onSelectCategory(category)">
+      <button >Appareils photo</button>
+      <button >Consoles</button>
+      <button >Écrans</button>
+      <button >Ordinateurs</button>
       <button class="selected">Tous les produits</button>
     </div>
   </section>
@@ -22,15 +22,15 @@
 <article>
   <span class="right-header" id="products-count">6 produits</span>
   <h1>Produits</h1>
-  <div class="products" id="products-list">
+  <div *ngFor="let product of products" [class.selected]="product.category === category" class="products" id="products-list">
     <div class="product">
-      <a routerLink="/produits/13" title="En savoir plus...">
-        <h2>Manette Xbox 360</h2>
-        <img alt="Manette Xbox 360" src="./assets/img/xbox-controller.png">
-        <p><small>Prix</small> 29,99&thinsp;$</p>
+      <a routerLink="/produits/{{product.id}}" title="En savoir plus...">
+        <h2>{{product.name}}</h2>
+        <img alt="{{product.name}}" src="./assets/img/{{product.image}}">
+        <p><small>Prix</small> {{product.price}}&thinsp;$</p>
       </a>
     </div>
-    <div class="product">
+    <!--<div class="product">
       <a routerLink="/produits/8" title="En savoir plus...">
         <h2>Moniteur 19"</h2>
         <img alt="Moniteur 19&quot;" src="./assets/img/monitor.png">
@@ -64,6 +64,6 @@
         <img alt="Console PS3" src="./assets/img/ps3.png">
         <p><small>Prix</small> 349,99&thinsp;$</p>
       </a>
-    </div>
+    </div> -->
   </div>
 </article>
