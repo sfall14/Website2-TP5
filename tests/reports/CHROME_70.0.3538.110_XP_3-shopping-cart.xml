@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="0"
+            tests="6">
+
+  <testsuite name="3-shopping-cart"
+    errors="0" failures="0" hostname="" id="" package="3-shopping-cart" skipped="0"
+    tests="6" time="13.42" timestamp="Tue, 04 Dec 2018 22:10:34 GMT">
+  
+    <testcase name="Aucun produit dans le panier" classname="3-shopping-cart" time="3.706" assertions="3">
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Un ou plusieurs produits dans le panier" classname="3-shopping-cart" time="4.378" assertions="6">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Suppression d'un item dans le panier" classname="3-shopping-cart" time="1.735" assertions="10">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Augmentation de la quantite associee a un item dans le panier" classname="3-shopping-cart" time="0.8150" assertions="5">
+
+    
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Diminution de la quantite associee a un item dans le panier" classname="3-shopping-cart" time="0.7220" assertions="5">
+
+    
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Suppression de tous les produits dans le panier" classname="3-shopping-cart" time="2.067" assertions="7">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+
+  
+
+  
+  </testsuite>
+</testsuites>

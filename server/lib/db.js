@@ -27,5 +27,4 @@ mongoose.model("Product", Product);
 
 mongoose.Promise = global.Promise;
 
-// TODO: Modifier le connect string par le votre!
-mongoose.connect("mongodb://...", { useMongoClient: true });
+mongoose.connect("mongodb://log4420user:log4420@ds155203.mlab.com:55203/log4420-online-shop", { useMongoClient: true });

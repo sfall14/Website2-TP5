@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="0"
+            tests="3">
+
+  <testsuite name="2-product"
+    errors="0" failures="0" hostname="" id="" package="2-product" skipped="0"
+    tests="3" time="11.83" timestamp="Tue, 04 Dec 2018 22:10:22 GMT">
+  
+    <testcase name="Page d'un produit" classname="2-product" time="3.854" assertions="5">
+
+    
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Produit invalide" classname="2-product" time="0.6940" assertions="1">
+
+    
+    </testcase>
+  
+    <testcase name="Ajout de produits dans le panier" classname="2-product" time="7.283" assertions="8">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+
+  
+
+  
+  </testsuite>
+</testsuites>

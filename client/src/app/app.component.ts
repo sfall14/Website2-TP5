@@ -1,19 +1,36 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ShoppingCartService } from './shopping-cart.service';
 
 /**
  * Defines the main component of the application.
  */
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html'
+    selector: 'app-root',
+    templateUrl: './app.component.html'
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
 
-  // TODO: Modifier le nom des auteurs pour vos noms
-  readonly authors = [
-    'Antoine Béland',
-    'Konstantinos Lambrou-Latreille'
-  ];
+    readonly authors = [
+        'Anthony Abboud',
+        'Sidy Fall'
+    ];
 
-  // TODO: À compléter
+    private cartCount: number;
+
+    constructor(private shoppingCartService: ShoppingCartService) {
+        this.cartCount = 0;
+        this.shoppingCartService.onItemsCountChange.subscribe(itemsCount => {
+            this.cartCount = itemsCount;
+        });
+    }
+
+    ngOnInit() {
+        this.shoppingCartService.getItems().then(items => {
+            items.forEach(item => {
+                this.cartCount += item.quantity;
+            });
+        }).catch(err => {
+            console.log(err);
+        });
+    }
 }

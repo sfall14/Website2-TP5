@@ -13,7 +13,9 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { OrderComponent } from './order/order.component';
 import { ConfirmationComponent } from './confirmation/confirmation.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { ProductsService } from './products.service';
+import { ProductsService, PricePipe } from './products.service';
+import { ShoppingCartService } from './shopping-cart.service';
+import { OrdersService } from './orders.service';
 
 // Application routes
 const appRoutes: Routes = [
@@ -34,6 +36,7 @@ const appRoutes: Routes = [
     HomeComponent,
     ProductsComponent,
     ProductComponent,
+    PricePipe,
     ContactComponent,
     ShoppingCartComponent,
     OrderComponent,
@@ -50,7 +53,9 @@ const appRoutes: Routes = [
     )
   ],
   providers: [
-    ProductsService
+    OrdersService,
+    ProductsService,
+    ShoppingCartService
   ],
   bootstrap: [AppComponent]
 })
